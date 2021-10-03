@@ -7,13 +7,20 @@ import argparse
 
 sid_re = re.compile('exports ([0-9]+) as "([^"]+)"')
 smap_re = re.compile('Push String:"(S[^"]+)".*String:"(A[^"]+)"')
-actionstring_re = re.compile('Push String:"_(?P<key>.+)" String:"(?P<value>.+)"')
+actionstring_re = re.compile('Push String:"_(?P<key>.+)" String:"(?P<value>.+)"', re.DOTALL)
 def extract_assets(dat_filename, outpath):
     question = {'audio': {}}
     swfdump_args = ['swfdump', '-a', dat_filename]
     swfdump_process = subprocess.run(swfdump_args, stdout=subprocess.PIPE, encoding='utf-8', check=True)
     swfdump = swfdump_process.stdout
-    for swfdump_line in swfdump.split('\n'):
+    previous_line = ""
+    for swfdump_line in swfdump.splitlines():
+        swfdump_line = previous_line + swfdump_line
+        if (swfdump_line.count('"') % 2 == 0): # poor man's "newline in quoted strings" handling
+            previous_line = ""
+        else:
+            previous_line = swfdump_line + "\n"
+            continue
         # extract audio information
         sid = sid_re.search(swfdump_line)
         if (sid):

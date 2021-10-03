@@ -8,4 +8,4 @@ Diese Reimplementierung läuft im Browser auf beliebiger Auflösung: [Video](sam
 
 `extract_q.py` extrahiert die (gesprochenen) Texte der Fragen.
 
-Leider erlaubt Jackbox Games, der derzeitige Lizenzhalter des Franchises, das Veröffentlichen der Spielinhalte nicht. Um diese Reimplementierung nutzen zu können, brauchst du also eine alte Installation des Originals. Aus diesem Grund wird dieses Projekt nicht weiter verfolgt.
+Leider erlaubt Jackbox Games (der derzeitige Lizenzhalter des Franchises) das Veröffentlichen der Spielinhalte nicht. Um diese Reimplementierung nutzen zu können, brauchst du also eine alte Installation des Originals. Aus diesem Grund wird dieses Projekt nicht weiter verfolgt.

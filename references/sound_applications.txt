@@ -1,0 +1,57 @@
+Shorties:
+A01 category (mandatory)
+A02 intro (optional)
+A03 question (mandatory)
+A04 empty
+A05 answers (mandatory for response type M)
+A06 comment correct (some exceptions)
+A07 outro correct (some exceptions)
+A08 comment incorrect (optional)
+A09 comment incorrect (optional)
+A10 comment incorrect (optional)
+A11 comment no (right) answer (rare)
+A12 outro no (right) answer (very rare)
+
+Generics:
+A	Cookie
+B	category choice resulted in "Sekt oder Selters"
+C/c00/G04c00*	resolve after no (right) answer
+C/c01/G04c01*	"please select category" (single player)
+C/c05/G04c05*	category select timeout
+C/c08/G04c08*	category selected intro
+C/c09/G04c09*	1000 €
+C/c10/G04c10*	2000 €
+C/c11/G04c11*	3000 €
+C/c12/G04c12*	4000 €
+C/c13/G04c13*	5000 €
+C/c14/G04c14*	6000 €
+C/c15/G04c15*	bridge to question
+C/c16/G04c16*	bridge after wrong answer / try again
+C/c20/G04c20*	comment on wrong answer
+C/c27/G04c27*	comment on right answer
+C/c28/G04c28*	resolve after no (right) answer
+C/c29/G04c29*	answer timeout
+C/c49/G04c49*	bridge to answers without question
+C/c56/G04c56*	comment on right answer without question
+C/c57/G04c57*	resolve after no single right answer (three players)
+C/c59/G04c59*	comment on wrong answer without question
+D	Schnickschnack-Frage
+E	Jack Attack
+H	Jack Greeting
+I	Wann-War-Was
+K	Spielende
+K/k53/G04k530	YDKJ
+L45	bridge to advertisements, advertisement
+L46	advertisement
+M	Feiertage
+N	Special Names
+v58	spielertaste (1 spieler)
+v59	spielertaste b→1
+v60	spielertaste p→2
+v61	spielertaste b→2
+
+mus:
+G04H79	menu background?
+G04I*	shorties
+G04S*	category selection
+G04Z*	"wann war was" background
