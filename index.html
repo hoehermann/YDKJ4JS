@@ -7,9 +7,6 @@
 <script src="script/Shorty.js"></script>
 
 <script>
-function pad00(n) {
-  return ('00'+n).slice(-2);
-}
 function init() {
   fetch('questions/shorties/shorties.json')
   .then(response => response.json())

@@ -1,3 +1,7 @@
+function pad00(n) {
+  return ('00'+n).slice(-2);
+}
+
 class Shorty {
   constructor(data, ui) {
     Object.assign(this, data);
@@ -95,8 +99,7 @@ class Shorty {
         } else {
           // play generic "wrong answer" comment
           let r = Math.floor(Math.random()*85)+1;
-          r = ('00'+r).slice(-2);
-          this.currentSoundURL = `gen/C/c20/G04c20${r}.mp3`;
+          this.currentSoundURL = `gen/C/c20/G04c20${pad00(r)}.mp3`;
         }
         return false;
       }
